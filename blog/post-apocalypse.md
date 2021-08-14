@@ -1,6 +1,7 @@
 ---
-title: "Post-Apocalypse"
-date: "2021-08-15"
+title: Post-Apocalypse
+date: 2021-08-15
+image: /img/alex-loup-hmtb568ur0g-unsplash.jpg
 ---
 
 Wow look at all this content. How do they do it? When will it all end? ....and what comes after?
