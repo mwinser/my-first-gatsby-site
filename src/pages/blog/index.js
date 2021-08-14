@@ -3,14 +3,16 @@ import Layout from '../../components/layout'
 import { Link, graphql } from "gatsby"
 
 const BlogPage = ({data}) => {
+
     return (
         <Layout pageTitle="My Blog Posts">
             
             {
-                data.allMdx.nodes.map(node => (
+                data.allMarkdownRemark.nodes.map(node => (
+                    
                     <article key={node.id}>
                         <h2>
-                          <Link to={`/blog/${node.slug}`}>
+                          <Link to={`/blog/${node.frontmatter.title.split(" ").join("-").toLowerCase()}`}>
                             {node.frontmatter.title}
                           </Link>
                         </h2>
@@ -25,23 +27,17 @@ const BlogPage = ({data}) => {
 
 export const query = graphql`
 query PostList {
-    allMdx(sort: {fields: frontmatter___date, order: DESC}) {
-      nodes {
-        wordCount {
-          paragraphs
-          sentences
-          words
-        }
-        frontmatter {
-          date(formatString: "MMMM D, YYYY")
-          title
-        }
-        id
-        slug
+  allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
+    nodes {
+      frontmatter {
+        date(formatString: "MMM D, YYYY")
+        title
       }
+      id
     }
   }
-  
+}
+
 `
 
 

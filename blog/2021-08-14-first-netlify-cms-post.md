@@ -1,6 +1,6 @@
 ---
-title: First Netlify CMS Post
-date: 2021-08-14 11:27
+title: "First Netlify CMS Post"
+date: "2021-08-14 11:27"
 ---
 Sup **SUP *SUP!***
 

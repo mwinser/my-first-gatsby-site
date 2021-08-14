@@ -8,6 +8,7 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-plugin-mdx",
     "gatsby-transformer-sharp",
+    "gatsby-transformer-remark",
     "gatsby-plugin-netlify-cms",
     {
       resolve: "gatsby-source-filesystem",
