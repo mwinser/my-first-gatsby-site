@@ -7,14 +7,13 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 const BlogPost = ({data}) => {
  const {markdownRemark} = data  //holds .md post data
  const {frontmatter, html} = markdownRemark
- console.log("relative= " + frontmatter.image)
- const correctNode = data.allFile.nodes.filter(node=> node.name + node.ext == "alex-loup-hmtb568ur0g-unsplash.jpg"
+ const imageNode = data.allFile.nodes.filter(node=> 
+  "/img/" + node.name + node.ext === frontmatter.image
  )
-  console.log(correctNode)
   return (
     <Layout pageTitle={frontmatter.title}>
       <p>Posted: {frontmatter.date}</p>
-      <GatsbyImage image={correctNode[0].childImageSharp.gatsbyImageData} />
+      <GatsbyImage image={imageNode[0].childImageSharp.gatsbyImageData} alt={frontmatter.image_alt} />
       <div 
         className="blog-post-content"
         dangerouslySetInnerHTML={{__html:html}}

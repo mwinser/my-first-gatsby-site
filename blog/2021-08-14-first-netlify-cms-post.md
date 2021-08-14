@@ -2,6 +2,7 @@
 title: First Netlify CMS Post
 date: 2021-08-14 11:27
 image: /img/alex-loup-hmtb568ur0g-unsplash.jpg
+image_alt: A desolate wasteland
 ---
 Sup **SUP *SUP!***
 

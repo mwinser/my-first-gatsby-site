@@ -1,6 +1,7 @@
 ---
 title: "Posty Posterson"
 date: "2021-08-13"
+image_alt: A desolate wasteland
 ---
 This is my first blog post! Isn't it *great*?
 Some of my **favorite** things are:

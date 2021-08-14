@@ -30,7 +30,7 @@ collections: # A list of collections the CMS should be able to edit
         widget: 'image'
         required: false
         tagname: ''
-
+      - { label: 'Image Alt-Text', name: 'image_alt', widget: 'string', hint: 'Images should always have alternate text that describes them' }
       - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Main content goes here.' }
 
   - name: 'faq' # Used in routes, ie.: /admin/collections/:slug/edit

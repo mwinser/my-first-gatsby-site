@@ -1,6 +1,7 @@
 ---
 title: "Postmaster General"
 date: "2021-08-14"
+image_alt: A desolate wasteland
 ---
 Here's another post! It's even better than the first one! Atten-*HUT!*
 
