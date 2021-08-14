@@ -13,7 +13,12 @@ const BlogPost = ({data}) => {
   return (
     <Layout pageTitle={frontmatter.title}>
       <p>Posted: {frontmatter.date}</p>
-      <GatsbyImage image={imageNode[0].childImageSharp.gatsbyImageData} alt={frontmatter.image_alt} />
+      {imageNode[0]? 
+        (
+        <GatsbyImage image={imageNode[0].childImageSharp.gatsbyImageData} alt={frontmatter.image_alt} />
+        )
+        : null
+      }
       <div 
         className="blog-post-content"
         dangerouslySetInnerHTML={{__html:html}}
