@@ -6,7 +6,7 @@ Sup **SUP *SUP!***
 
 `<h1>my dudes</h1>`
 
-``[mwinser.com](mwinser.com)``
+[mwinser.com](mwinser.com)
 
 # heading1
 
