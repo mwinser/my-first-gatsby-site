@@ -15,6 +15,7 @@ collections: # A list of collections the CMS should be able to edit
     folder: 'blog'
     slug: '{{slug}}'
     create: true # Allow users to create new documents in this collection
+    preview: false
     fields: # The fields each document in this collection have
       - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
       - {
@@ -33,14 +34,14 @@ collections: # A list of collections the CMS should be able to edit
       - { label: 'Image Alt-Text', name: 'image_alt', widget: 'string', hint: 'Images should always have alternate text that describes them' }
       - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Main content goes here.' }
 
-  - name: 'faq' # Used in routes, ie.: /admin/collections/:slug/edit
-    label: 'FAQ' # Used in the UI
-    folder: '_faqs'
+  - name: 'menu' # Used in routes, ie.: /admin/collections/:slug/edit
+    label: 'Menu' # Used in the UI
+    folder: 'menu'
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - { label: 'Question', name: 'title', widget: 'string', tagname: 'h1' }
-      - { label: 'Answer', name: 'body', widget: 'markdown' }
-
+      - { label: 'Item Name', name: 'item_name', widget: 'string' }
+      - { label: 'Item Description', name: 'item_description', widget: 'string' }
+      - { label: 'Item Price', name: 'item_price', widget: 'number', value_type: "float" }
   - name: 'settings'
     label: 'Settings'
     delete: false # Prevent users from deleting documents in this collection
