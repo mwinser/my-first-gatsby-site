@@ -39,9 +39,19 @@ collections: # A list of collections the CMS should be able to edit
     folder: 'menu'
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - { label: 'Item Name', name: 'item_name', widget: 'string' }
+      - { label: 'Item Name', name: 'title', widget: 'string' }
       - { label: 'Item Description', name: 'item_description', widget: 'string' }
       - { label: 'Item Price', name: 'item_price', widget: 'number', value_type: "float" }
+      - label: 'Item Image'
+        name: 'item_image'
+        widget: 'image'
+        required: false
+        tagname: ''
+      - { label: 'Image Alt-Text', name: 'image_alt', widget: 'string', hint: 'Images should always have alternate text that describes them' }
+
+
+  
+  
   - name: 'settings'
     label: 'Settings'
     delete: false # Prevent users from deleting documents in this collection

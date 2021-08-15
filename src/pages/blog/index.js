@@ -27,7 +27,10 @@ const BlogPage = ({data}) => {
 
 export const query = graphql`
 query PostList {
-  allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
+  allMarkdownRemark(
+    sort: {fields: frontmatter___date, order: DESC}
+    filter: {frontmatter: {date: {ne: null}}}
+    ) {
     nodes {
       frontmatter {
         date(formatString: "MMM D, YYYY")
